@@ -23,7 +23,7 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        $id = uniqid(); // Gera um ID único
+        $id = uniqid(); // Gera um id
         $title = $request->input('title');
         $task = new Task($id, $title);
         $this->repo->save($task);
